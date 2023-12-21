@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--    crm lead-->
+    <record model="ir.ui.view" id="crm_lead_form">
+        <field name="name">crm.lead.form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='is_blacklisted']" position="after">
+                <field name="quote_status"/>
+                <field name="domestic_quote_status"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
